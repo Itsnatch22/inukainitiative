@@ -1,0 +1,62 @@
+import type { Metadata } from "next";
+
+import { ContactForm } from "@/components/contact-form";
+
+export const metadata: Metadata = {
+  title: "Contact",
+  description: "Get in touch with Inuka 034 Initiative to ask questions, share ideas, or learn more about getting involved.",
+};
+
+export default function ContactPage() {
+  return (
+    <div className="mx-auto w-full max-w-[92rem] px-4 py-12 sm:px-8 lg:px-12">
+      <div className="mb-12 max-w-4xl">
+        <p className="text-sm font-medium uppercase tracking-[0.2em] text-primary">Contact</p>
+        <h1 className="mt-3 text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
+          We&apos;re here to help and listen.
+        </h1>
+        <p className="mt-5 text-lg text-muted-foreground">
+          Reach out with questions, ideas, or ways you would like to get involved. We welcome conversations with neighbors, partners, and community supporters.
+        </p>
+      </div>
+
+      <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-14">
+        <aside className="rounded-[1.75rem] border border-border bg-card p-8 shadow-sm sm:p-10">
+          <h2 className="text-2xl font-semibold text-foreground">Get in touch</h2>
+          <ul className="mt-6 space-y-5 text-base text-muted-foreground">
+            <li>
+              <span className="block text-sm font-medium uppercase tracking-[0.18em] text-primary">Email</span>
+              <a href="mailto:inuka34initiative@gmail.com" className="mt-2 inline-block text-foreground hover:text-primary">
+                inuka34initiative@gmail.com
+              </a>
+            </li>
+            <li>
+              <span className="block text-sm font-medium uppercase tracking-[0.18em] text-primary">Phone</span>
+              <a href="tel:+254711891639" className="mt-2 inline-block text-foreground hover:text-primary">
+                0711891639
+              </a>
+            </li>
+            <li>
+              <span className="block text-sm font-medium uppercase tracking-[0.18em] text-primary">Location</span>
+              <p className="mt-2 text-foreground">Muigai, Kitengela</p>
+            </li>
+            <li>
+              <span className="block text-sm font-medium uppercase tracking-[0.18em] text-primary">Office hours</span>
+              <p className="mt-2 text-foreground">Monday to Friday, 9:00 AM to 5:00 PM</p>
+            </li>
+          </ul>
+        </aside>
+
+        <div className="rounded-[1.75rem] border border-border bg-white p-8 shadow-sm sm:p-10">
+          <h2 className="text-2xl font-semibold text-foreground">Send a message</h2>
+          <p className="mt-2 text-sm text-muted-foreground">
+            Share a little about your question or idea and we&apos;ll get back to you as soon as possible.
+          </p>
+          <div className="mt-6">
+            <ContactForm />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
