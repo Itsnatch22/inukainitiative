@@ -1,12 +1,14 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { ChevronLeft, ChevronRight, Play } from "lucide-react";
+import { ChevronLeft, ChevronRight, Maximize2, Play } from "lucide-react";
 import gsap from "gsap";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import type { Swiper as SwiperInstance } from "swiper";
+
+import { MediaLightbox } from "@/components/media-lightbox";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -48,6 +50,7 @@ const media = [
 export function CommunityMedia() {
   const sectionRef = useRef<HTMLElement>(null);
   const swiperRef = useRef<SwiperInstance | null>(null);
+  const [selectedMedia, setSelectedMedia] = useState<(typeof media)[number] | null>(null);
 
   useEffect(() => {
     const context = gsap.context(() => {
@@ -116,7 +119,12 @@ export function CommunityMedia() {
         >
           {media.map((item) => (
             <SwiperSlide key={item.src}>
-              <div className="relative aspect-[4/5] overflow-hidden bg-stone-200">
+              <button
+                type="button"
+                onClick={() => setSelectedMedia(item)}
+                aria-label={`Expand ${item.type}: ${item.alt}`}
+                className="group relative block aspect-[4/5] w-full overflow-hidden bg-stone-200 text-left"
+              >
                 {item.type === "image" ? (
                   <Image src={item.src} alt={item.alt} fill sizes="(max-width: 640px) 80vw, 38vw" className="object-cover" />
                 ) : (
@@ -135,11 +143,24 @@ export function CommunityMedia() {
                     </span>
                   </>
                 )}
-              </div>
+                <span className="absolute inset-0 bg-black/10 transition-colors group-hover:bg-black/25 group-focus-visible:bg-black/25" />
+                <span className="absolute bottom-3 right-3 inline-flex h-8 w-8 items-center justify-center rounded-full bg-black/55 text-white opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100">
+                  <Maximize2 className="h-3.5 w-3.5" />
+                </span>
+              </button>
             </SwiperSlide>
           ))}
         </Swiper>
       </div>
+      <MediaLightbox
+        open={selectedMedia !== null}
+        onOpenChange={(open) => {
+          if (!open) setSelectedMedia(null);
+        }}
+        type={selectedMedia?.type ?? "image"}
+        src={selectedMedia?.src ?? ""}
+        alt={selectedMedia?.alt ?? ""}
+      />
     </section>
   );
 }
