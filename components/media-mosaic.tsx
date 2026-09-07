@@ -43,14 +43,14 @@ export function MediaMosaic({ images, video, className = "" }: MediaMosaicProps)
         </div>
       ))}
       {video ? (
-        <div className="relative col-span-2 aspect-video overflow-hidden rounded-[1.5rem] bg-deep-green shadow-sm ring-1 ring-black/5 lg:col-span-6 lg:aspect-auto">
+        <div className="relative col-span-2 aspect-video overflow-hidden rounded-[1.5rem] bg-deep-green shadow-sm ring-1 ring-black/5 lg:col-span-6">
           <video
             src={video.src}
             controls
             playsInline
             preload="metadata"
             aria-label={video.label}
-            className="h-full w-full object-cover"
+            className="h-full w-full object-contain"
           />
           <span className="pointer-events-none absolute left-3 top-3 rounded-full bg-black/55 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-white backdrop-blur-sm">
             Video
