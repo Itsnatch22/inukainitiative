@@ -80,6 +80,11 @@
     letter-spacing: -0.025em;
   }
 
+  em {
+    color: var(--accent);
+    font-weight: 600;
+  }
+
   a {
     @apply transition-colors;
   }

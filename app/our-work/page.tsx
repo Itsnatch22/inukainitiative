@@ -1,27 +1,13 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { FeaturedProjects } from "@/components/featured-projects";
 
 export const metadata: Metadata = {
   title: "Our work",
   description:
     "See how INUKA 34 connects climate action, sustainable livelihoods, and community empowerment in practical projects.",
 };
-
-const projectImages = [
-  {
-    src: "/media/WhatsApp Image 2026-09-05 at 22.42.47 (1).jpeg",
-    alt: "A planted vertical garden tower",
-  },
-  {
-    src: "/media/WhatsApp Image 2026-09-05 at 22.42.46.jpeg",
-    alt: "Recycled bottles arranged as hanging planters",
-  },
-  {
-    src: "/media/WhatsApp Image 2026-09-05 at 22.42.45 (1).jpeg",
-    alt: "Leafy greens growing in a reused container",
-  },
-];
 
 export default function OurWorkPage() {
   return (
@@ -73,22 +59,7 @@ export default function OurWorkPage() {
         </div>
       </section>
 
-      <section className="mt-12 grid gap-5 sm:grid-cols-3">
-        {projectImages.map((image) => (
-          <div
-            key={image.src}
-            className="overflow-hidden rounded-[1.5rem] bg-muted"
-          >
-            <Image
-              src={image.src}
-              alt={image.alt}
-              width={700}
-              height={850}
-              className="aspect-[4/5] h-full w-full object-cover transition-transform duration-500 hover:scale-[1.03]"
-            />
-          </div>
-        ))}
-      </section>
+      <FeaturedProjects />
 
       <section className="mt-20 rounded-[2rem] bg-secondary px-6 py-10 sm:px-10 lg:px-14">
         <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
