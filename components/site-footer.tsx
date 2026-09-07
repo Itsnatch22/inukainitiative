@@ -42,10 +42,10 @@ export function SiteFooter() {
               className="h-14 w-14 rounded-full bg-white p-1 object-contain shadow-[0_2px_12px_rgba(4,51,26,0.2)] ring-2 ring-accent"
             />
             <div>
-              <div className="text-[10px] font-semibold uppercase tracking-[0.18em] text-primary-foreground/80">
+              <div className="text-lg font-bold uppercase tracking-[0.14em] text-primary-foreground">
                 Inuka 034
               </div>
-              <div className="text-lg font-semibold">Initiative</div>
+              <div className="text-xs font-semibold tracking-[0.08em] text-primary-foreground/80">Initiative</div>
             </div>
           </div>
           <p className="max-w-md text-sm text-primary-foreground/80">

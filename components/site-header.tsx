@@ -38,8 +38,8 @@ export function SiteHeader() {
             priority
           />
           <div className="leading-tight">
-            <div className="text-[10px] font-semibold uppercase tracking-[0.18em] text-primary">Inuka 034</div>
-            <div className="text-base font-semibold text-foreground">Initiative</div>
+            <div className="text-base font-bold uppercase tracking-[0.14em] text-primary">Inuka 034</div>
+            <div className="text-xs font-semibold tracking-[0.08em] text-foreground">Initiative</div>
           </div>
         </Link>
 
@@ -88,7 +88,10 @@ export function SiteHeader() {
                     height={56}
                     className="h-13 w-13 rounded-full bg-white p-1 object-contain shadow-[0_2px_10px_rgba(4,51,26,0.18)] ring-2 ring-accent"
                   />
-                  <span className="text-base font-semibold">Inuka 034 Initiative</span>
+                  <span className="leading-tight">
+                    <span className="block text-base font-bold uppercase tracking-[0.12em] text-primary">Inuka 034</span>
+                    <span className="block text-xs font-semibold tracking-[0.08em] text-foreground">Initiative</span>
+                  </span>
                 </div>
               </div>
               <nav className="flex flex-col gap-2 p-4" aria-label="Mobile navigation">
