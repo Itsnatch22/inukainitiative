@@ -1,7 +1,7 @@
-import Image from "next/image";
 import Link from "next/link";
 
 import { CommunityMedia } from "@/components/community-media";
+import { HomeHero } from "@/components/home-hero";
 import {
   Accordion,
   AccordionContent,
@@ -11,18 +11,22 @@ import {
 
 const programs = [
   {
+    slug: "climate-action-environmental-resilience",
     title: "Climate action & environmental resilience",
     description: "Community-led adaptation, ecosystem restoration, agroforestry, conservation, and practical responses to climate change.",
   },
   {
+    slug: "sustainable-agroecology",
     title: "Sustainable agroecology",
     description: "Climate-smart food systems, household gardens, soil health, nutrition, and water-efficient growing practices.",
   },
   {
+    slug: "inclusive-economic-empowerment",
     title: "Inclusive economic empowerment",
     description: "Skills, green enterprises, livelihoods, and opportunities that strengthen economic independence for women and youth.",
   },
   {
+    slug: "holistic-community-development",
     title: "Holistic community development",
     description: "Training, mentorship, wellbeing, leadership, participation, and support that help communities guide their own development.",
   },
@@ -68,54 +72,10 @@ const faqs = [
 
 export default function HomePage() {
   return (
-    <div className="mx-auto w-full max-w-screen-2xl px-4 py-10 sm:px-8 lg:px-12 xl:py-12">
-      <section className="grid items-center gap-10 rounded-[2rem] bg-white p-6 shadow-sm ring-1 ring-border md:grid-cols-[1.05fr_0.95fr] md:p-12 lg:gap-14">
-        <div>
-          <p className="mb-3 text-sm font-medium uppercase tracking-[0.22em] text-primary">
-            Rising for a resilient tomorrow
-          </p>
-          <h1 className="max-w-2xl text-5xl font-semibold tracking-tight text-foreground sm:text-6xl lg:text-7xl">
-            Restoring nature, empowering people, and strengthening <em>livelihoods.</em>
-          </h1>
-          <p className="mt-6 max-w-2xl text-xl leading-9 text-muted-foreground">
-            INUKA 34 partners with communities in Kajiado County to build climate resilience, sustainable livelihoods, and inclusive economic opportunities for lasting prosperity.
-          </p>
-
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Link
-              href="/about"
-              className="inline-flex items-center justify-center rounded-full bg-primary px-5 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
-            >
-              Our story
-            </Link>
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center rounded-full border border-border bg-background px-5 py-3 text-sm font-medium text-foreground transition-colors hover:bg-muted"
-            >
-              Work with us
-            </Link>
-          </div>
-
-          <div className="mt-8 flex flex-wrap gap-3 text-sm text-muted-foreground">
-            <span className="rounded-full bg-secondary px-3 py-1.5">Climate resilience</span>
-            <span className="rounded-full bg-secondary px-3 py-1.5">Sustainable livelihoods</span>
-            <span className="rounded-full bg-secondary px-3 py-1.5">Community-led</span>
-          </div>
-        </div>
-
-        <div className="overflow-hidden rounded-[1.75rem] bg-muted">
-          <Image
-            src="/media/group.jpeg"
-            alt="Community members working together outdoors"
-            width={860}
-            height={680}
-            priority
-            className="h-full w-full object-cover"
-          />
-        </div>
-      </section>
-
-      <CommunityMedia />
+    <>
+      <HomeHero />
+      <div className="mx-auto w-full max-w-screen-2xl px-4 py-10 sm:px-8 lg:px-12 xl:py-12">
+        <CommunityMedia />
 
       <section className="mt-20 grid gap-8 rounded-[1.75rem] border border-border bg-card p-8 shadow-sm lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:gap-14 lg:p-10">
         <div>
@@ -141,13 +101,18 @@ export default function HomePage() {
         </div>
         <div className="grid gap-8 md:grid-cols-3">
           {programs.map((program) => (
-            <article key={program.title} className="h-full rounded-[1.5rem] border border-border bg-card p-6 shadow-sm">
+            <Link
+              key={program.title}
+              href={`/programs/${program.slug}`}
+              className="block h-full rounded-[1.5rem] border border-border bg-card p-6 shadow-sm transition-transform hover:-translate-y-1"
+            >
               <div className="mb-4 inline-flex rounded-full bg-primary/10 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-primary">
                 0{programs.indexOf(program) + 1}
               </div>
               <h3 className="text-2xl font-semibold leading-tight text-foreground sm:text-3xl"><em>{program.title}</em></h3>
               <p className="mt-4 text-base leading-7 text-muted-foreground">{program.description}</p>
-            </article>
+              <span className="mt-5 inline-flex text-sm font-semibold text-primary">Explore this area →</span>
+            </Link>
           ))}
         </div>
       </section>
@@ -223,6 +188,7 @@ export default function HomePage() {
           </Link>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 }

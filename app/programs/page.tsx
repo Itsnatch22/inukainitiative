@@ -1,17 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
+import { MediaMosaic } from "@/components/media-mosaic";
+import { programs } from "@/lib/programs";
+
 export const metadata: Metadata = {
   title: "Programs",
   description: "Explore INUKA 34's four thematic areas of climate action, agroecology, economic empowerment, and holistic community development.",
 };
-
-const programs = [
-  { title: "Climate action & environmental resilience", category: "01", description: "Climate adaptation and mitigation, tree growing, ecosystem restoration, agroforestry, soil and water conservation, waste reduction, recycling, reuse, and community-led environmental education.", goal: "Enable communities to become better prepared for climate change while protecting the natural resources on which their lives and livelihoods depend." },
-  { title: "Sustainable agroecology, food & nutrition security", category: "02", description: "Agroecological farming, food-producing trees, sustainable crop and livestock production, household gardens, water-efficient growing systems, soil health, and farmer training.", goal: "Help communities produce healthy food, protect their land, and build more resilient and productive livelihoods." },
-  { title: "Inclusive economic empowerment & sustainable livelihoods", category: "03", description: "Entrepreneurship, green businesses and jobs, youth skills, women and girls' empowerment, vocational training, financial literacy, innovation, and value addition.", goal: "Turn skills, local resources, and environmental opportunities into sustainable income, employment, and economic independence." },
-  { title: "Holistic community development, capacity & wellbeing", category: "04", description: "Community leadership, mentorship, counselling, psychosocial support, life skills, youth and women's leadership, social inclusion, mobilization, and collective action.", goal: "Build confident, capable, and connected communities that can identify challenges, develop solutions, and lead their own development." },
-];
 
 export default function ProgramsPage() {
   return (
@@ -26,6 +22,19 @@ export default function ProgramsPage() {
         </p>
       </section>
 
+      <MediaMosaic
+        className="mt-12"
+        images={[
+          { src: "/media/WhatsApp Image 2026-09-07 at 12.24.50.jpeg", alt: "People engaging with a community project" },
+          { src: "/media/WhatsApp Image 2026-09-07 at 12.24.50 (1).jpeg", alt: "A practical activity supporting local livelihoods" },
+          { src: "/media/WhatsApp Image 2026-09-07 at 12.24.51.jpeg", alt: "Community members learning together" },
+          { src: "/media/WhatsApp Image 2026-09-07 at 10.34.18 (1).jpeg", alt: "A sustainable growing project" },
+          { src: "/media/WhatsApp Image 2026-09-05 at 22.42.48 (1).jpeg", alt: "A community garden detail" },
+          { src: "/media/WhatsApp Image 2026-09-05 at 22.42.46 (1).jpeg", alt: "A practical growing system made from reused materials" },
+        ]}
+        video={{ src: "/media/WhatsApp Video 2026-09-05 at 22.42.04.mp4", label: "INUKA 34 program activity" }}
+      />
+
       <section className="mt-14 grid gap-8 md:grid-cols-2 xl:grid-cols-4">
         {programs.map((program) => (
           <article key={program.title} className="h-full rounded-[1.5rem] border border-border bg-card p-8 shadow-sm">
@@ -34,7 +43,12 @@ export default function ProgramsPage() {
             </div>
             <h2 className="mt-4 text-3xl font-semibold leading-tight text-foreground"><em>{program.title}</em></h2>
             <p className="mt-4 text-base leading-7 text-muted-foreground">{program.description}</p>
-            <p className="mt-5 border-t border-border pt-4 text-sm leading-6 text-foreground"><span className="font-semibold text-primary">Our goal:</span> {program.goal}</p>
+            <Link
+              href={`/programs/${program.slug}`}
+              className="mt-6 inline-flex text-sm font-semibold text-primary hover:text-primary/80"
+            >
+              Explore this area →
+            </Link>
           </article>
         ))}
       </section>

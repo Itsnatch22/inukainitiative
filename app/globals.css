@@ -22,6 +22,8 @@
   --color-muted-foreground: var(--muted-foreground);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
+  --color-deep-green: #04331a;
+  --color-bright-gold: #fcc434;
   --color-destructive: var(--destructive);
   --color-border: var(--border);
   --color-input: var(--input);
@@ -106,4 +108,10 @@
 
 .community-swiper .swiper-pagination-bullet-active {
   background: var(--primary);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 30;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.3);
 }

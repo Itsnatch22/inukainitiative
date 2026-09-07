@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu } from "lucide-react";
+import { ChevronDown, Menu } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -13,8 +13,14 @@ const navItems = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/our-work", label: "Our work" },
-  { href: "/programs", label: "Programs" },
   { href: "/contact", label: "Contact" },
+];
+
+const programLinks = [
+  { href: "/programs/climate-action", label: "Climate action" },
+  { href: "/programs/sustainable-agroecology", label: "Sustainable agroecology" },
+  { href: "/programs/economic-empowerment", label: "Economic empowerment" },
+  { href: "/programs/community-development", label: "Community development" },
 ];
 
 export function SiteHeader() {
@@ -58,6 +64,32 @@ export function SiteHeader() {
               {item.label}
             </Link>
           ))}
+          <div className="group relative">
+            <Link
+              href="/programs"
+              className={cn(
+                "inline-flex items-center gap-1 rounded-full px-3 py-2 text-sm font-medium transition-colors",
+                isActive("/programs")
+                  ? "bg-primary text-primary-foreground"
+                  : "text-muted-foreground hover:bg-muted hover:text-foreground"
+              )}
+            >
+              Programs
+              <ChevronDown className="h-3.5 w-3.5 transition-transform group-hover:rotate-180" />
+            </Link>
+            <div className="invisible absolute left-0 top-full z-50 w-72 pt-2 opacity-0 transition-all group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+              <div className="rounded-2xl border border-border bg-background p-2 shadow-lg">
+                <Link href="/programs" className="block rounded-xl px-3 py-2 text-sm font-semibold text-primary hover:bg-muted">
+                  All programs
+                </Link>
+                {programLinks.map((item) => (
+                  <Link key={item.href} href={item.href} className="block rounded-xl px-3 py-2 text-sm text-foreground hover:bg-muted">
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
         </nav>
 
         <div className="hidden md:block">
@@ -109,6 +141,16 @@ export function SiteHeader() {
                     {item.label}
                   </Link>
                 ))}
+                <div className="rounded-lg border border-border p-2">
+                  <Link href="/programs" className="block rounded-md px-2 py-2 text-base font-semibold text-primary">
+                    Programs
+                  </Link>
+                  {programLinks.map((item) => (
+                    <Link key={item.href} href={item.href} className="block rounded-md px-2 py-2 text-sm text-muted-foreground hover:bg-muted hover:text-foreground">
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
                 <Link
                   href="/get-involved"
                   className="mt-2 inline-flex items-center justify-center rounded-full bg-primary px-4 py-3 text-base font-medium text-primary-foreground"

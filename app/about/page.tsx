@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 
+import { MediaMosaic } from "@/components/media-mosaic";
+
 export const metadata: Metadata = {
   title: "About",
   description: "Learn about INUKA 34, its mission, vision, values, and community-centered approach in Kajiado County.",
@@ -61,6 +63,27 @@ export default function AboutPage() {
             loop
           />
         </div>
+      </section>
+
+      <section className="mt-16 grid gap-8 lg:grid-cols-[0.7fr_1.3fr] lg:items-center lg:gap-14">
+        <div>
+          <p className="text-sm font-medium uppercase tracking-[0.2em] text-primary">The people behind the work</p>
+          <h2 className="mt-3 text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
+            A closer look at <em>shared action.</em>
+          </h2>
+          <p className="mt-4 text-base leading-7 text-muted-foreground">
+            Our work is practical, collaborative, and rooted in the places where people live, learn, grow, and create opportunity.
+          </p>
+        </div>
+        <MediaMosaic
+          images={[
+            { src: "/media/WhatsApp Image 2026-09-07 at 12.19.38.jpeg", alt: "Community members participating in a project" },
+            { src: "/media/WhatsApp Image 2026-09-07 at 12.19.38 (1).jpeg", alt: "People working together outdoors" },
+            { src: "/media/WhatsApp Image 2026-09-07 at 12.19.39.jpeg", alt: "A community activity in progress" },
+            { src: "/media/WhatsApp Image 2026-09-07 at 12.38.53.jpeg", alt: "A practical community-led solution" },
+          ]}
+          video={{ src: "/media/WhatsApp Video 2026-09-05 at 22.42.04.mp4", label: "Community work in progress" }}
+        />
       </section>
 
       <section className="mt-20 grid gap-8 md:grid-cols-2">

@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
+import { Donate } from "@/components/donate";
+import { MediaMosaic } from "@/components/media-mosaic";
+
 export const metadata: Metadata = {
   title: "Get involved",
   description:
@@ -40,6 +43,31 @@ export default function GetInvolvedPage() {
             Whether you bring time, skills, resources, or partnership, your
             contribution can help communities in Kajiado build resilience,
             opportunity, and lasting prosperity.
+          </p>
+        </div>
+      </section>
+
+      <Donate />
+
+      <section className="mt-16 grid gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:gap-14">
+        <MediaMosaic
+          images={[
+            { src: "/media/WhatsApp Image 2026-09-07 at 12.24.51.jpeg", alt: "People taking part in a community activity" },
+            { src: "/media/WhatsApp Image 2026-09-07 at 12.24.50.jpeg", alt: "A community-led project in progress" },
+            { src: "/media/WhatsApp Image 2026-09-07 at 12.19.39.jpeg", alt: "People collaborating on practical work" },
+            { src: "/media/WhatsApp Image 2026-09-07 at 10.34.17.jpeg", alt: "A hands-on sustainable project" },
+            { src: "/media/WhatsApp Image 2026-09-05 at 22.42.45.jpeg", alt: "Plants growing in a recycled container" },
+            { src: "/media/WhatsApp Image 2026-09-05 at 22.42.47.jpeg", alt: "Community garden materials ready for use" },
+          ]}
+          video={{ src: "/media/WhatsApp Video 2026-09-05 at 22.42.04 (1).mp4", label: "Community participation in action" }}
+        />
+        <div>
+          <p className="text-sm font-medium uppercase tracking-[0.2em] text-primary">See the invitation</p>
+          <h2 className="mt-3 text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
+            Participation starts with <em>showing up.</em>
+          </h2>
+          <p className="mt-4 text-base leading-7 text-muted-foreground">
+            From sharing skills to building partnerships, involvement is most meaningful when it grows from real relationships and practical action.
           </p>
         </div>
       </section>

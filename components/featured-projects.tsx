@@ -21,6 +21,26 @@ const projectImages = [
     src: "/media/WhatsApp Image 2026-09-05 at 22.42.44.jpeg",
     alt: "Seedlings growing in a raised garden bed",
   },
+  {
+    src: "/media/WhatsApp Image 2026-09-05 at 22.42.45.jpeg",
+    alt: "Plants growing in a recycled container",
+  },
+  {
+    src: "/media/WhatsApp Image 2026-09-05 at 22.42.45 (2).jpeg",
+    alt: "A close view of the garden project",
+  },
+  {
+    src: "/media/WhatsApp Image 2026-09-05 at 22.42.46 (1).jpeg",
+    alt: "A practical growing system made from reused materials",
+  },
+  {
+    src: "/media/WhatsApp Image 2026-09-05 at 22.42.47.jpeg",
+    alt: "Community garden materials ready for use",
+  },
+  {
+    src: "/media/WhatsApp Image 2026-09-05 at 22.42.48 (1).jpeg",
+    alt: "A community garden detail",
+  },
 ];
 
 const projectVideos = [
@@ -35,6 +55,14 @@ const projectVideos = [
   {
     src: "/media/WhatsApp Video 2026-09-05 at 22.42.04 (3).mp4",
     title: "Learning by doing",
+  },
+  {
+    src: "/media/WhatsApp Video 2026-09-05 at 22.42.04 (1).mp4",
+    title: "Working together",
+  },
+  {
+    src: "/media/WhatsApp Video 2026-09-05 at 22.42.04.mp4",
+    title: "Growing practical solutions",
   },
 ];
 
@@ -105,14 +133,14 @@ export function FeaturedProjects() {
       ) : (
         <div id={`${tabId}-videos`} role="tabpanel" className="mt-5 grid gap-5 md:grid-cols-3">
           {projectVideos.map((video) => (
-            <div key={video.src} className="overflow-hidden rounded-[1.5rem] bg-black">
+            <div key={video.src} className="overflow-hidden rounded-3xl bg-black">
               <video
                 src={video.src}
                 controls
                 playsInline
                 preload="metadata"
                 aria-label={video.title}
-                className="aspect-[4/5] h-full w-full object-cover"
+                className="aspect-4/5 h-full w-full object-cover"
               />
               <div className="bg-white px-4 py-3">
                 <p className="text-sm font-medium text-foreground">{video.title}</p>
