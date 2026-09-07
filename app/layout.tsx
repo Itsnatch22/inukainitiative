@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 
-import { Banner } from "@/components/banner";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
@@ -42,9 +41,6 @@ export default function RootLayout({
       <body className="min-h-screen bg-background text-foreground antialiased">
         <div className="flex min-h-screen flex-col">
           <SiteHeader />
-          <div className="mx-auto w-full max-w-screen-2xl px-4 sm:px-8 lg:px-12">
-            <Banner />
-          </div>
           <main className="flex-1">{children}</main>
           <SiteFooter />
         </div>
