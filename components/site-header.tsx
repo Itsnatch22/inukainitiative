@@ -27,14 +27,14 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-border/80 bg-background/90 backdrop-blur-sm">
-      <div className="mx-auto flex w-full max-w-[92rem] items-center justify-between px-4 py-3 sm:px-8 lg:px-12">
+      <div className="mx-auto flex w-full max-w-screen-2xl items-center justify-between px-4 py-3 sm:px-8 lg:px-12">
         <Link href="/" className="flex items-center gap-3" aria-label="Inuka 034 Initiative home">
           <Image
             src="/logo.jpeg"
             alt="Inuka 034 Initiative logo"
-            width={52}
-            height={56}
-            className="h-12 w-11 object-contain"
+            width={64}
+            height={64}
+            className="h-14 w-14 rounded-full bg-white p-1 object-contain shadow-[0_2px_12px_rgba(4,51,26,0.2)] ring-2 ring-accent"
             priority
           />
           <div className="leading-tight">
@@ -84,9 +84,9 @@ export function SiteHeader() {
                   <Image
                     src="/logo.jpeg"
                     alt="Inuka 034 Initiative logo"
-                    width={44}
-                    height={48}
-                    className="h-11 w-10 object-contain"
+                    width={56}
+                    height={56}
+                    className="h-13 w-13 rounded-full bg-white p-1 object-contain shadow-[0_2px_10px_rgba(4,51,26,0.18)] ring-2 ring-accent"
                   />
                   <span className="text-base font-semibold">Inuka 034 Initiative</span>
                 </div>

@@ -5,7 +5,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Our work",
   description:
-    "See how Inuka 034 Initiative turns practical ideas into community-led projects.",
+    "See how INUKA 34 connects climate action, sustainable livelihoods, and community empowerment in practical projects.",
 };
 
 const projectImages = [
@@ -25,19 +25,17 @@ const projectImages = [
 
 export default function OurWorkPage() {
   return (
-    <div className="mx-auto w-full max-w-[92rem] px-4 py-12 sm:px-8 lg:px-12">
+    <div className="mx-auto w-full max-w-screen-2xl px-4 py-12 sm:px-8 lg:px-12">
       <section className="grid gap-10 rounded-[2rem] bg-white p-6 shadow-sm ring-1 ring-border md:grid-cols-[0.9fr_1.1fr] md:p-12 lg:items-center lg:gap-14">
         <div>
           <p className="text-sm font-medium uppercase tracking-[0.2em] text-primary">
             Our work
           </p>
-          <h1 className="mt-3 text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
-            Practical ideas, built with the people who use them.
+          <h1 className="mt-3 text-5xl font-semibold tracking-tight text-foreground sm:text-6xl">
+            Practical ideas, built with the <em>people who will sustain them.</em>
           </h1>
           <p className="mt-5 max-w-xl text-lg leading-8 text-muted-foreground">
-            We focus on projects that are useful, learnable, and possible to
-            carry forward locally. The vertical garden is one example of that
-            approach.
+            We champion local knowledge, practical innovation, and solutions communities can understand, afford, own, and sustain.
           </p>
         </div>
         <div className="overflow-hidden rounded-[1.5rem] bg-muted">
@@ -57,20 +55,20 @@ export default function OurWorkPage() {
           <p className="text-sm font-medium uppercase tracking-[0.2em] text-primary">
             Featured project
           </p>
-          <h2 className="mt-3 text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
-            Growing more with less space.
+          <h2 className="mt-3 text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
+            Connecting climate action with <em>food and opportunity.</em>
           </h2>
         </div>
         <div className="space-y-5 text-base leading-7 text-muted-foreground">
           <p>
-            This garden project experiments with vertical growing, reused
-            materials, and simple structures that can fit into a small
-            footprint.
+            The garden project demonstrates how water-efficient growing systems,
+            reused materials, and local creativity can respond to food security,
+            waste reduction, and environmental challenges at the same time.
           </p>
           <p>
-            The work is hands-on: preparing soil, adapting containers, planting
-            seedlings, and learning what helps them thrive. It is as much about
-            sharing knowledge as it is about the finished garden.
+            It is also about skills, confidence, and ownership. A practical
+            solution becomes more valuable when people can learn from it, adapt
+            it, and connect it to stronger livelihoods.
           </p>
         </div>
       </section>
@@ -98,12 +96,13 @@ export default function OurWorkPage() {
             <p className="text-sm font-medium uppercase tracking-[0.2em] text-primary">
               What matters to us
             </p>
-            <h2 className="mt-3 max-w-2xl text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
-              Projects should leave people with something they can keep using.
+            <h2 className="mt-3 max-w-3xl text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
+              We do not just plant trees. We plant <em>food, opportunities, skills, livelihoods, and hope.</em>
             </h2>
             <p className="mt-4 max-w-2xl text-base leading-7 text-muted-foreground">
-              A useful skill, a stronger connection, a shared resource, or the
-              confidence to try the next idea.
+              Every project is part of a wider ecosystem of change connecting
+              restoration, food security, waste reduction, innovation, and
+              community empowerment.
             </p>
           </div>
           <Link

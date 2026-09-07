@@ -11,70 +11,74 @@ import {
 
 const programs = [
   {
-    title: "Community learning",
-    description: "Accessible learning spaces that help neighbors build confidence, skills, and practical knowledge.",
+    title: "Climate action & environmental resilience",
+    description: "Community-led adaptation, ecosystem restoration, agroforestry, conservation, and practical responses to climate change.",
   },
   {
-    title: "Volunteer support",
-    description: "Meaningful opportunities for people to contribute time, energy, and care in ways that make a visible difference.",
+    title: "Sustainable agroecology",
+    description: "Climate-smart food systems, household gardens, soil health, nutrition, and water-efficient growing practices.",
   },
   {
-    title: "Family connection",
-    description: "Inclusive activities and gatherings that strengthen relationships, celebrate culture, and build stronger ties.",
+    title: "Inclusive economic empowerment",
+    description: "Skills, green enterprises, livelihoods, and opportunities that strengthen economic independence for women and youth.",
+  },
+  {
+    title: "Holistic community development",
+    description: "Training, mentorship, wellbeing, leadership, participation, and support that help communities guide their own development.",
   },
 ];
 
 const storyPillars = [
   {
-    title: "Local-first",
-    description: "We focus on the practical realities and strengths already present in the community.",
+    title: "Empowered people",
+    description: "Knowledge, skills, confidence, and support give people greater responsibility for their own development.",
   },
   {
-    title: "Welcoming",
-    description: "Everyone deserves a place to participate, be heard, and find belonging.",
+    title: "Sustainable livelihoods",
+    description: "Local resources and practical innovation can create lasting income and economic opportunity.",
   },
   {
-    title: "Action-oriented",
-    description: "Our work turns shared concern into practical, community-led progress.",
+    title: "Resilient communities",
+    description: "When people and nature are supported together, communities gain a stronger foundation for the future.",
   },
 ];
 
 const faqs = [
   {
-    question: "Who is Inuka 034 Initiative for?",
+    question: "Where does INUKA 34 work?",
     answer:
-      "Our work is for neighbors, families, young people, volunteers, and local partners who want practical ways to connect and contribute.",
+      "INUKA 34 works alongside communities in Kajiado County, including women, girls, youth, teenagers, pastoralist families, and other communities facing vulnerability.",
   },
   {
-    question: "What kinds of activities do you run?",
+    question: "What areas does INUKA 34 focus on?",
     answer:
-      "Activities include community learning, family and youth gatherings, volunteer support days, conversations, and hands-on projects such as the garden work shown here.",
+      "Our work connects climate action and environmental resilience, sustainable agroecology and food security, inclusive economic empowerment, and holistic community development.",
   },
   {
-    question: "How can I get involved?",
+    question: "Why connect environmental work with livelihoods?",
     answer:
-      "You can explore the programs, share your interest through the contact page, or reach out if you would like to volunteer, partner, or support an upcoming activity.",
+      "Environmental health, food security, income, and wellbeing are connected. We look for practical solutions that protect natural resources while creating skills, food, opportunity, and sustainable livelihoods.",
   },
   {
-    question: "Do I need experience to participate?",
+    question: "What makes the approach different?",
     answer:
-      "No. Activities are designed to be welcoming and practical, with room for people to learn as they go and contribute in ways that suit them.",
+      "We do not simply deliver solutions to communities. We work alongside people to identify challenges, co-create culturally appropriate responses, and build solutions communities can understand, own, and sustain.",
   },
 ];
 
 export default function HomePage() {
   return (
-    <div className="mx-auto w-full max-w-[92rem] px-4 py-10 sm:px-8 lg:px-12 xl:py-12">
+    <div className="mx-auto w-full max-w-screen-2xl px-4 py-10 sm:px-8 lg:px-12 xl:py-12">
       <section className="grid items-center gap-10 rounded-[2rem] bg-white p-6 shadow-sm ring-1 ring-border md:grid-cols-[1.05fr_0.95fr] md:p-12 lg:gap-14">
         <div>
           <p className="mb-3 text-sm font-medium uppercase tracking-[0.22em] text-primary">
-            Community-led support
+            Rising for a resilient tomorrow
           </p>
-          <h1 className="max-w-xl text-4xl font-semibold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-            Care, connection, and opportunity for everyday life.
+          <h1 className="max-w-2xl text-5xl font-semibold tracking-tight text-foreground sm:text-6xl lg:text-7xl">
+            Restoring nature, empowering people, and strengthening <em>livelihoods.</em>
           </h1>
-          <p className="mt-5 max-w-lg text-lg leading-8 text-muted-foreground">
-            Inuka 034 Initiative brings neighbors together around practical support, shared learning, and inclusive participation that strengthens local life.
+          <p className="mt-6 max-w-2xl text-xl leading-9 text-muted-foreground">
+            INUKA 34 partners with communities in Kajiado County to build climate resilience, sustainable livelihoods, and inclusive economic opportunities for lasting prosperity.
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -82,26 +86,26 @@ export default function HomePage() {
               href="/about"
               className="inline-flex items-center justify-center rounded-full bg-primary px-5 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
             >
-              Learn more
+              Our story
             </Link>
             <Link
               href="/contact"
               className="inline-flex items-center justify-center rounded-full border border-border bg-background px-5 py-3 text-sm font-medium text-foreground transition-colors hover:bg-muted"
             >
-              Get in touch
+              Work with us
             </Link>
           </div>
 
           <div className="mt-8 flex flex-wrap gap-3 text-sm text-muted-foreground">
-            <span className="rounded-full bg-secondary px-3 py-1.5">Inclusive</span>
-            <span className="rounded-full bg-secondary px-3 py-1.5">Supportive</span>
+            <span className="rounded-full bg-secondary px-3 py-1.5">Climate resilience</span>
+            <span className="rounded-full bg-secondary px-3 py-1.5">Sustainable livelihoods</span>
             <span className="rounded-full bg-secondary px-3 py-1.5">Community-led</span>
           </div>
         </div>
 
         <div className="overflow-hidden rounded-[1.75rem] bg-muted">
           <Image
-            src="/media/WhatsApp Image 2026-09-05 at 22.43.10.jpeg"
+            src="/media/group.jpeg"
             alt="Community members working together outdoors"
             width={860}
             height={680}
@@ -115,33 +119,33 @@ export default function HomePage() {
 
       <section className="mt-20 grid gap-8 rounded-[1.75rem] border border-border bg-card p-8 shadow-sm lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:gap-14 lg:p-10">
         <div>
-          <p className="text-sm font-medium uppercase tracking-[0.22em] text-primary">Who we are</p>
-          <h2 className="mt-3 text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
-            A welcoming place for neighbors to connect, learn, and grow.
+          <p className="text-sm font-medium uppercase tracking-[0.22em] text-primary">About INUKA 34</p>
+          <h2 className="mt-3 text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
+            Communities have the knowledge and creativity to <em>shape their own futures.</em>
           </h2>
         </div>
         <div>
           <p className="text-base leading-7 text-muted-foreground">
-            We create practical, people-centered spaces where local participation feels possible, useful, and genuinely welcoming. Our work is rooted in trust, local knowledge, and the belief that stronger communities grow through everyday connection.
+            We work alongside people and communities to identify local challenges, co-create practical solutions, and drive lasting change. Our approach links climate action with economic empowerment and community development.
           </p>
           <Link href="/about" className="mt-6 inline-flex items-center text-sm font-medium text-primary hover:text-primary/80">
-            More about our mission →
+            Read our story →
           </Link>
         </div>
       </section>
 
       <section className="mt-20">
         <div className="mb-8 text-center">
-          <p className="text-sm font-medium uppercase tracking-[0.2em] text-primary">Programs</p>
-          <h2 className="mt-3 text-3xl font-semibold text-foreground">Ways we support the community</h2>
+          <p className="text-sm font-medium uppercase tracking-[0.2em] text-primary">Our thematic areas</p>
+          <h2 className="mt-3 text-4xl font-semibold text-foreground sm:text-5xl">Four connected areas of <em>practical action.</em></h2>
         </div>
         <div className="grid gap-8 md:grid-cols-3">
           {programs.map((program) => (
             <article key={program.title} className="h-full rounded-[1.5rem] border border-border bg-card p-6 shadow-sm">
               <div className="mb-4 inline-flex rounded-full bg-primary/10 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-primary">
-                Community
+                0{programs.indexOf(program) + 1}
               </div>
-              <h3 className="text-2xl font-semibold leading-tight text-foreground">{program.title}</h3>
+              <h3 className="text-2xl font-semibold leading-tight text-foreground sm:text-3xl"><em>{program.title}</em></h3>
               <p className="mt-4 text-base leading-7 text-muted-foreground">{program.description}</p>
             </article>
           ))}
@@ -151,8 +155,8 @@ export default function HomePage() {
       <section className="mt-20 grid gap-10 lg:grid-cols-[0.7fr_1.3fr] lg:gap-16">
         <div>
           <p className="text-sm font-medium uppercase tracking-[0.2em] text-primary">FAQ</p>
-          <h2 className="mt-3 text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
-            A few things people ask.
+          <h2 className="mt-3 text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
+            A few things <em>people ask.</em>
           </h2>
           <p className="mt-5 max-w-md text-base leading-7 text-muted-foreground">
             If you still have a question, we would be glad to hear from you.
@@ -187,8 +191,8 @@ export default function HomePage() {
       <section className="mt-20 rounded-[2rem] bg-primary px-6 py-10 text-primary-foreground ring-1 ring-primary/10 sm:px-10 lg:px-14">
         <div className="mb-8 text-center">
           <p className="text-sm font-medium uppercase tracking-[0.2em] text-primary-foreground/75">Why it matters</p>
-          <h2 className="mt-3 text-3xl font-semibold text-primary-foreground">
-            Useful support begins with real community relationships.
+          <h2 className="mt-3 text-4xl font-semibold text-primary-foreground sm:text-5xl">
+            Empowered people build <em>resilient communities.</em>
           </h2>
         </div>
         <div className="grid gap-8 md:grid-cols-3">
@@ -202,14 +206,14 @@ export default function HomePage() {
       </section>
 
       <section className="mt-20 px-4 text-center sm:px-8">
-        <p className="text-sm font-medium uppercase tracking-[0.2em] text-primary">Get involved</p>
-        <h2 className="mt-3 text-3xl font-semibold text-foreground">Let&apos;s build a stronger, more connected community together.</h2>
+        <p className="text-sm font-medium uppercase tracking-[0.2em] text-primary">Our invitation</p>
+        <h2 className="mt-3 text-4xl font-semibold text-foreground sm:text-5xl">We do not just plant trees. We plant <em>opportunities, food, skills, and hope.</em></h2>
         <div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row">
           <Link
             href="/programs"
             className="inline-flex items-center justify-center rounded-full bg-primary px-5 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
           >
-            Explore programs
+            Explore our work
           </Link>
           <Link
             href="/contact"

@@ -4,42 +4,42 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Get involved",
   description:
-    "Find practical ways to support, join, and contribute to the work of Inuka 034 Initiative.",
+    "Find practical ways to support, join, and contribute to INUKA 34's work in Kajiado County.",
 };
 
 const waysToHelp = [
   {
-    title: "Volunteer your time",
+    title: "Support community-led action",
     description:
-      "Bring your time, skills, and energy to community activities, learning sessions, and hands-on projects.",
+      "Join efforts that connect climate action, sustainable food systems, environmental restoration, and community wellbeing.",
   },
   {
-    title: "Partner with us",
+    title: "Share skills and knowledge",
     description:
-      "Connect your organization, group, or local network with work that supports practical community participation.",
+      "Bring training, mentorship, enterprise support, technical knowledge, or local experience that can strengthen community solutions.",
   },
   {
-    title: "Share an idea",
+    title: "Build lasting opportunity",
     description:
-      "Tell us what would make a difference where you live. Good projects often start with a simple local observation.",
+      "Help develop green enterprises, food-growing systems, practical innovations, and livelihoods that communities can own and sustain.",
   },
 ];
 
 export default function GetInvolvedPage() {
   return (
-    <div className="mx-auto w-full max-w-[92rem] px-4 py-12 sm:px-8 lg:px-12">
+    <div className="mx-auto w-full max-w-screen-2xl px-4 py-12 sm:px-8 lg:px-12">
       <section className="rounded-[2rem] bg-primary px-6 py-12 text-primary-foreground sm:px-10 lg:px-14 lg:py-16">
         <p className="text-sm font-medium uppercase tracking-[0.2em] text-primary-foreground/75">
           Get involved
         </p>
         <div className="mt-4 grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
-          <h1 className="max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
-            There is more than one way to help a community grow.
+          <h1 className="max-w-4xl text-5xl font-semibold tracking-tight sm:text-6xl lg:text-7xl">
+            There is more than one way to <em>strengthen a community.</em>
           </h1>
           <p className="max-w-lg text-base leading-7 text-primary-foreground/80">
-            Whether you have an hour, an idea, or a wider network to share, your
-            contribution can help make local participation more practical and
-            welcoming.
+            Whether you bring time, skills, resources, or partnership, your
+            contribution can help communities in Kajiado build resilience,
+            opportunity, and lasting prosperity.
           </p>
         </div>
       </section>
@@ -49,8 +49,8 @@ export default function GetInvolvedPage() {
           <p className="text-sm font-medium uppercase tracking-[0.2em] text-primary">
             Ways to contribute
           </p>
-          <h2 className="mt-3 text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
-            Start where it feels useful.
+          <h2 className="mt-3 text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
+            Start where your contribution can <em>make a difference.</em>
           </h2>
         </div>
 
@@ -63,8 +63,8 @@ export default function GetInvolvedPage() {
               <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-sm font-semibold text-primary">
                 0{index + 1}
               </div>
-              <h3 className="mt-6 text-2xl font-semibold text-foreground">
-                {way.title}
+              <h3 className="mt-6 text-3xl font-semibold text-foreground">
+                <em>{way.title}</em>
               </h3>
               <p className="mt-3 text-base leading-7 text-muted-foreground">
                 {way.description}
@@ -79,14 +79,15 @@ export default function GetInvolvedPage() {
           <p className="text-sm font-medium uppercase tracking-[0.2em] text-primary">
             Let&apos;s talk
           </p>
-          <h2 className="mt-3 text-3xl font-semibold tracking-tight text-foreground">
-            Have a question or a starting point?
+          <h2 className="mt-3 text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
+            Want to help create <em>lasting change?</em>
           </h2>
         </div>
         <div>
           <p className="text-base leading-7 text-muted-foreground">
-            We are happy to hear from volunteers, local groups, potential
-            partners, and anyone who wants to understand the work better.
+            We welcome conversations with communities, schools, local
+            organizations, businesses, partners, and people who want to support
+            climate-resilient and inclusive development.
           </p>
           <Link
             href="/contact"

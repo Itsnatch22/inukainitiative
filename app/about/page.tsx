@@ -1,41 +1,52 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "Learn about Inuka 034 Initiative, its mission, values, and the community-centered approach behind its work.",
+  description: "Learn about INUKA 34, its mission, vision, values, and community-centered approach in Kajiado County.",
 };
 
 const values = [
   {
-    title: "Belonging",
-    description: "Creating welcoming spaces where neighbors feel recognized, included, and valued.",
+    title: "Environmental stewardship",
+    description: "Protecting and restoring land, forests, water, and other natural resources is a shared responsibility.",
   },
   {
-    title: "Opportunity",
-    description: "Supporting learning, growth, and practical pathways for all ages and backgrounds.",
+    title: "Community empowerment",
+    description: "Communities should be equipped to create solutions to their own challenges and become agents of change.",
   },
   {
-    title: "Trust",
-    description: "Building steady relationships rooted in respect, transparency, and consistency.",
+    title: "Sustainability",
+    description: "We pursue lasting environmental, social, and economic benefits for generations to come.",
   },
   {
-    title: "Connection",
-    description: "Helping people find shared purpose across the strengths and needs of their community.",
+    title: "Inclusivity",
+    description: "Youth, women, girls, and vulnerable communities should have meaningful opportunities to participate and benefit.",
+  },
+  {
+    title: "Integrity",
+    description: "Honesty, transparency, accountability, and responsible use of resources guide our relationships.",
+  },
+  {
+    title: "Collaboration",
+    description: "Meaningful change requires communities, schools, organizations, businesses, and other stakeholders to work together.",
+  },
+  {
+    title: "Innovation",
+    description: "Practical creativity can make conservation, food production, and sustainable livelihoods more accessible.",
   },
 ];
 
 export default function AboutPage() {
   return (
-    <div className="mx-auto w-full max-w-[92rem] px-4 py-12 sm:px-8 lg:px-12">
+    <div className="mx-auto w-full max-w-screen-2xl px-4 py-12 sm:px-8 lg:px-12">
       <section className="grid gap-10 rounded-[2rem] bg-white p-6 shadow-sm ring-1 ring-border md:grid-cols-[1.05fr_0.95fr] md:p-12 lg:gap-14">
         <div className="flex flex-col justify-center">
           <p className="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-primary">About us</p>
-          <h1 className="text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
-            A community rooted in care, opportunity, and shared growth.
+          <h1 className="text-5xl font-semibold tracking-tight text-foreground sm:text-6xl">
+            A community building <em>resilient, self-reliant, and prosperous futures.</em>
           </h1>
           <p className="mt-5 max-w-xl text-lg text-muted-foreground">
-            Inuka 034 Initiative is a community-centered organization that brings people together around practical support, meaningful participation, and everyday belonging.
+            INUKA 34 is a community-centered organization working alongside people and communities in Kajiado County to build resilient, self-reliant, and prosperous futures.
           </p>
         </div>
         <div className="overflow-hidden rounded-[1.5rem] bg-muted">
@@ -55,16 +66,16 @@ export default function AboutPage() {
       <section className="mt-20 grid gap-8 md:grid-cols-2">
         <div className="rounded-[1.5rem] border border-border bg-card p-8 shadow-sm">
           <p className="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-primary">Mission</p>
-          <h2 className="text-2xl font-semibold text-foreground">We help communities feel connected and supported.</h2>
+          <h2 className="text-3xl font-semibold text-foreground sm:text-4xl">Our mission is to <em>strengthen lasting climate resilience.</em></h2>
           <p className="mt-4 text-base leading-7 text-muted-foreground">
-            Our mission is to create trusted, accessible spaces where people can gather, learn, and participate in initiatives that strengthen everyday life.
+            To partner with communities in Kajiado County to strengthen lasting climate resilience, foster sustainable livelihoods, and empower people with the knowledge, skills, and confidence to guide their own development and create a better future for their families and communities.
           </p>
         </div>
         <div className="rounded-[1.5rem] border border-border bg-card p-8 shadow-sm">
           <p className="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-primary">Vision</p>
-          <h2 className="text-2xl font-semibold text-foreground">A more vibrant, connected, and resilient neighborhood.</h2>
+          <h2 className="text-3xl font-semibold text-foreground sm:text-4xl">A climate-resilient Kajiado County with <em>lasting prosperity.</em></h2>
           <p className="mt-4 text-base leading-7 text-muted-foreground">
-            We imagine a future where neighbors can access practical support, meaningful relationships, and inclusive opportunities for community life.
+            A climate-resilient Kajiado County where empowered communities create sustainable livelihoods and inclusive economic opportunities for lasting prosperity.
           </p>
         </div>
       </section>
@@ -72,7 +83,7 @@ export default function AboutPage() {
       <section className="mt-20">
         <div className="mb-6 text-center">
           <p className="text-sm font-medium uppercase tracking-[0.2em] text-primary">Our values</p>
-          <h2 className="mt-3 text-3xl font-semibold text-foreground">What guides our work</h2>
+          <h2 className="mt-3 text-4xl font-semibold text-foreground sm:text-5xl">What <em>guides our work.</em></h2>
         </div>
         <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-4">
           {values.map((value) => (
@@ -80,7 +91,7 @@ export default function AboutPage() {
               <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-full bg-primary/10 text-sm font-semibold text-primary">
                 {value.title.slice(0, 2)}
               </div>
-              <h3 className="text-xl font-semibold text-foreground">{value.title}</h3>
+              <h3 className="text-2xl font-semibold text-foreground"><em>{value.title}</em></h3>
               <p className="mt-3 text-sm leading-6 text-muted-foreground">{value.description}</p>
             </article>
           ))}
@@ -90,16 +101,16 @@ export default function AboutPage() {
       <section className="mt-20 grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-14">
         <div className="rounded-[1.5rem] border border-border bg-primary p-8 text-primary-foreground shadow-sm">
           <p className="text-sm font-medium uppercase tracking-[0.2em] text-primary-foreground/75">Background</p>
-          <h2 className="mt-3 text-3xl font-semibold">A local story in progress</h2>
+          <h2 className="mt-3 text-4xl font-semibold">We invest in <em>people and possibility.</em></h2>
           <p className="mt-4 text-base leading-7 text-primary-foreground/85">
-            Our work grows from the simple idea that communities become stronger when people have practical ways to connect, contribute, and belong.
+            Through training, mentorship, practical learning, counselling, and psychosocial support, we help people build confidence, make informed choices, and take greater responsibility for their futures.
           </p>
         </div>
         <div className="rounded-[1.5rem] border border-border bg-card p-8 shadow-sm">
           <p className="text-sm font-medium uppercase tracking-[0.2em] text-primary">Community focus</p>
-          <h2 className="mt-3 text-3xl font-semibold text-foreground">Serving neighbors with dignity and care</h2>
+          <h2 className="mt-3 text-4xl font-semibold text-foreground">We connect people with <em>the environment.</em></h2>
           <p className="mt-4 text-base leading-7 text-muted-foreground">
-            We work with residents, partners, and volunteers to strengthen the everyday conditions that make community life more connected and resilient. Our focus is on practical inclusion, local trust, and support that people can access without barriers.
+            Trees, gardens, sustainable farming, and water-efficient growing systems can provide food, income, biodiversity, and protection for the land. Environmental sustainability and human wellbeing go hand in hand.
           </p>
         </div>
       </section>

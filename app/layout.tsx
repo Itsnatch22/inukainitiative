@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Plus_Jakarta_Sans } from "next/font/google";
+import { Inter, Playfair_Display } from "next/font/google";
 
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
@@ -11,8 +11,8 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-const plusJakarta = Plus_Jakarta_Sans({
-  variable: "--font-plus-jakarta",
+const playfairDisplay = Playfair_Display({
+  variable: "--font-playfair-display",
   subsets: ["latin"],
 });
 
@@ -22,11 +22,11 @@ export const metadata: Metadata = {
     template: "%s | Inuka 034 Initiative",
   },
   description:
-    "Inuka 034 Initiative is a community-centered organization focused on inclusion, local connection, and meaningful participation.",
+    "INUKA 34 partners with communities in Kajiado County to strengthen climate resilience, sustainable livelihoods, and inclusive economic opportunities.",
   openGraph: {
     title: "Inuka 034 Initiative",
     description:
-      "A community-centered organization rising for a resilient tomorrow.",
+      "Restoring nature, empowering people, and strengthening livelihoods in Kajiado County.",
     type: "website",
   },
 };
@@ -37,7 +37,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${plusJakarta.variable}`}>
+    <html lang="en" className={`${inter.variable} ${playfairDisplay.variable}`}>
       <body className="min-h-screen bg-background text-foreground antialiased">
         <div className="flex min-h-screen flex-col">
           <SiteHeader />

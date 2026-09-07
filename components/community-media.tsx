@@ -73,7 +73,7 @@ export function CommunityMedia() {
     <section ref={sectionRef} className="mt-20 grid gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-end lg:gap-14">
       <div className="media-intro max-w-md">
         <p className="text-sm font-medium uppercase tracking-[0.22em] text-primary">In the garden</p>
-        <h2 className="mt-3 text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+        <h2 className="mt-3 text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
           Small materials, practical ideas, shared work.
         </h2>
         <p className="mt-5 text-base leading-7 text-muted-foreground">

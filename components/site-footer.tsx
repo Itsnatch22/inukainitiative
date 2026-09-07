@@ -31,15 +31,15 @@ export function SiteFooter() {
 
   return (
     <footer className="border-t border-border bg-primary text-primary-foreground">
-      <div className="mx-auto grid w-full max-w-[92rem] gap-10 px-4 py-12 sm:px-8 lg:grid-cols-[1.2fr_0.75fr_1fr] lg:px-12">
+      <div className="mx-auto grid w-full max-w-screen-2xl gap-10 px-4 py-12 sm:px-8 lg:grid-cols-[1.2fr_0.75fr_1fr] lg:px-12">
         <div>
           <div className="mb-3 flex items-center gap-3">
             <Image
               src="/logo.jpeg"
               alt="Inuka 034 Initiative logo"
-              width={52}
-              height={56}
-              className="h-12 w-11 rounded-md object-contain"
+              width={64}
+              height={64}
+              className="h-14 w-14 rounded-full bg-white p-1 object-contain shadow-[0_2px_12px_rgba(4,51,26,0.2)] ring-2 ring-accent"
             />
             <div>
               <div className="text-[10px] font-semibold uppercase tracking-[0.18em] text-primary-foreground/80">
@@ -49,7 +49,7 @@ export function SiteFooter() {
             </div>
           </div>
           <p className="max-w-md text-sm text-primary-foreground/80">
-            A community-centered organization rising for a resilient tomorrow through connection, learning, and shared action.
+            Restoring nature, empowering people, and strengthening livelihoods for a resilient Kajiado County.
           </p>
         </div>
 
@@ -110,7 +110,7 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="border-t border-white/10">
-        <div className="mx-auto flex w-full max-w-[92rem] items-center justify-between px-4 py-4 text-xs text-primary-foreground/75 sm:px-8 lg:px-12">
+        <div className="mx-auto flex w-full max-w-screen-2xl items-center justify-between px-4 py-4 text-xs text-primary-foreground/75 sm:px-8 lg:px-12">
           <p>© {year} Inuka 034 Initiative</p>
           <p>Community support with purpose</p>
         </div>

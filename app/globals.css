@@ -6,7 +6,7 @@
 
 @theme inline {
   --font-sans: var(--font-inter);
-  --font-heading: var(--font-plus-jakarta);
+  --font-heading: var(--font-playfair-display);
   --font-mono: var(--font-geist-mono);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -33,24 +33,24 @@
 }
 
 :root {
-  --background: #fafaf7;
-  --foreground: #17221b;
+  --background: #f6f6f5;
+  --foreground: #04331a;
   --card: #ffffff;
-  --card-foreground: #17221b;
+  --card-foreground: #04331a;
   --popover: #ffffff;
-  --popover-foreground: #17221b;
-  --primary: #166534;
+  --popover-foreground: #04331a;
+  --primary: #095422;
   --primary-foreground: #f8faf7;
-  --secondary: #edf3ee;
-  --secondary-foreground: #17221b;
-  --muted: #f3f4f0;
-  --muted-foreground: #647067;
-  --accent: #d97706;
-  --accent-foreground: #17221b;
+  --secondary: #e8f0df;
+  --secondary-foreground: #04331a;
+  --muted: #eef1eb;
+  --muted-foreground: #53665a;
+  --accent: #e6a617;
+  --accent-foreground: #04331a;
   --destructive: #b91c1c;
-  --border: #e5e7e2;
-  --input: #f5f5f3;
-  --ring: rgba(22, 101, 52, 0.33);
+  --border: #dce3d8;
+  --input: #f1f3ef;
+  --ring: rgba(9, 84, 34, 0.33);
   --radius: 1rem;
 }
 
@@ -66,7 +66,7 @@
   body {
     @apply min-h-screen bg-background text-foreground antialiased;
     font-family: var(--font-inter), sans-serif;
-    background-image: radial-gradient(circle at top, rgba(22, 101, 52, 0.06), transparent 35%);
+    background-image: radial-gradient(circle at top, rgba(97, 156, 32, 0.08), transparent 35%);
     text-rendering: optimizeLegibility;
   }
 
@@ -76,8 +76,8 @@
   h4,
   h5,
   h6 {
-    font-family: var(--font-plus-jakarta), sans-serif;
-    letter-spacing: -0.04em;
+    font-family: var(--font-playfair-display), serif;
+    letter-spacing: -0.025em;
   }
 
   a {
@@ -85,7 +85,7 @@
   }
 
   ::selection {
-    background: rgba(22, 101, 52, 0.18);
+    background: rgba(230, 166, 23, 0.25);
   }
 }
 
