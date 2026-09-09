@@ -37,8 +37,8 @@ export function validateEnv(): EnvConfig {
     RESEND_API_KEY: process.env.RESEND_API_KEY ?? "",
     UPSTASH_REDIS_REST_URL: process.env.UPSTASH_REDIS_REST_URL,
     UPSTASH_REDIS_REST_TOKEN: process.env.UPSTASH_REDIS_REST_TOKEN,
-    CONTACT_EMAIL_FROM: process.env.CONTACT_EMAIL_FROM ?? "inuka34initiative@gmail.com",
-    CONTACT_EMAIL_TO: process.env.CONTACT_EMAIL_TO ?? "inuka34initiative@gmail.com",
+    CONTACT_EMAIL_FROM: process.env.CONTACT_EMAIL_FROM ?? "info@inukainitiative.org",
+    CONTACT_EMAIL_TO: process.env.CONTACT_EMAIL_TO ?? "info@inukainitiative.org",
   };
 }
 

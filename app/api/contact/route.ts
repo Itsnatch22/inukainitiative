@@ -48,8 +48,8 @@ export async function POST(req: NextRequest) {
     }
 
     const payload = parsedResult.data;
-    const contactEmailFrom = env.CONTACT_EMAIL_FROM ?? "inuka34initiative@gmail.com";
-    const contactEmailTo = env.CONTACT_EMAIL_TO ?? "inuka34initiative@gmail.com";
+    const contactEmailFrom = env.CONTACT_EMAIL_FROM ?? "info@inukainitiative.org";
+    const contactEmailTo = env.CONTACT_EMAIL_TO ?? "info@inukainitiative.org";
     const resend = new Resend(env.RESEND_API_KEY);
     const submittedAt = new Date().toISOString();
 

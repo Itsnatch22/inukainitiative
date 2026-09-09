@@ -40,8 +40,8 @@ export function ContactConfirmation({
           <Text style={footer}>
             If you need to add anything to your message, reply to this email or
             write to{" "}
-            <Link href="mailto:inuka34initiative@gmail.com" style={link}>
-              inuka34initiative@gmail.com
+            <Link href="mailto:info@inukainitiative.org" style={link}>
+              info@inukainitiative.org
             </Link>
             .
           </Text>

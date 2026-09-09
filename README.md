@@ -71,8 +71,8 @@ Create a `.env.local` file with the values needed for the contact route:
 
 ```env
 RESEND_API_KEY=re_xxxxxxxxx
-CONTACT_EMAIL_FROM=inuka34initiative@gmail.com
-CONTACT_EMAIL_TO=inuka34initiative@gmail.com
+CONTACT_EMAIL_FROM=info@inukainitiative.org
+CONTACT_EMAIL_TO=info@inukainitiative.org
 ```
 
 The optional Upstash variables enable server-side rate limiting:

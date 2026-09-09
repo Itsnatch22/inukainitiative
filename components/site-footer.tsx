@@ -73,11 +73,11 @@ export function SiteFooter() {
             Contact
           </h3>
           <a
-            href="mailto:inuka34initiative@gmail.com"
+            href="mailto:info@inukainitiative.org"
             className="inline-flex items-center gap-2 text-sm text-primary-foreground/85 transition-colors hover:text-white"
           >
             <FiMail className="h-4 w-4" aria-hidden="true" />
-            inuka34initiative@gmail.com
+            info@inukainitiative.org
           </a>
           <a
             href="tel:+254711891639"

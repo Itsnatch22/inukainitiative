@@ -39,8 +39,8 @@ export default function ContactPage() {
           <ul className="mt-6 space-y-5 text-base text-muted-foreground">
             <li>
               <span className="block text-sm font-medium uppercase tracking-[0.18em] text-primary">Email</span>
-              <a href="mailto:inuka34initiative@gmail.com" className="mt-2 inline-block text-foreground hover:text-primary">
-                inuka34initiative@gmail.com
+              <a href="mailto:info@inukainitiative.org" className="mt-2 inline-block text-foreground hover:text-primary">
+                info@inukainitiative.org
               </a>
             </li>
             <li>
