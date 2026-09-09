@@ -1,8 +1,9 @@
 "use client";
 
-import { useId, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import Image from "next/image";
 import { ImageIcon, Play } from "lucide-react";
+import gsap from "gsap";
 
 const projectImages = [
   {
@@ -41,6 +42,86 @@ const projectImages = [
     src: "/media/WhatsApp Image 2026-09-05 at 22.42.48 (1).jpeg",
     alt: "A community garden detail",
   },
+  {
+    src: "/media/WhatsApp Image 2026-09-09 at 17.09.06.jpeg",
+    alt: "Community members gathered during a project activity",
+  },
+  {
+    src: "/media/WhatsApp Image 2026-09-09 at 17.09.06 (1).jpeg",
+    alt: "A close view of people participating in the project",
+  },
+  {
+    src: "/media/WhatsApp Image 2026-09-09 at 17.09.07.jpeg",
+    alt: "A hands-on community activity",
+  },
+  {
+    src: "/media/WhatsApp Image 2026-09-09 at 17.09.07 (1).jpeg",
+    alt: "People working together outdoors",
+  },
+  {
+    src: "/media/WhatsApp Image 2026-09-09 at 17.09.07 (2).jpeg",
+    alt: "A practical solution being demonstrated",
+  },
+  {
+    src: "/media/WhatsApp Image 2026-09-09 at 17.09.07 (3).jpeg",
+    alt: "Community participation in action",
+  },
+  {
+    src: "/media/WhatsApp Image 2026-09-09 at 17.09.08.jpeg",
+    alt: "A community-led learning moment",
+  },
+  {
+    src: "/media/WhatsApp Image 2026-09-09 at 17.09.08 (1).jpeg",
+    alt: "Shared work during a field activity",
+  },
+  {
+    src: "/media/WhatsApp Image 2026-09-09 at 17.09.08 (2).jpeg",
+    alt: "A practical project taking shape",
+  },
+  {
+    src: "/media/WhatsApp Image 2026-09-09 at 17.09.08 (3).jpeg",
+    alt: "Community members learning by doing",
+  },
+  {
+    src: "/media/WhatsApp Image 2026-09-09 at 17.09.09.jpeg",
+    alt: "People contributing to a shared project",
+  },
+  {
+    src: "/media/WhatsApp Image 2026-09-09 at 17.09.09 (1).jpeg",
+    alt: "A project detail from the field",
+  },
+  {
+    src: "/media/WhatsApp Image 2026-09-09 at 17.09.09 (2).jpeg",
+    alt: "A community activity in progress",
+  },
+  {
+    src: "/media/WhatsApp Image 2026-09-09 at 17.09.09 (3).jpeg",
+    alt: "Collaborative work outdoors",
+  },
+  {
+    src: "/media/WhatsApp Image 2026-09-09 at 17.09.10.jpeg",
+    alt: "A practical demonstration",
+  },
+  {
+    src: "/media/WhatsApp Image 2026-09-09 at 17.09.10 (1).jpeg",
+    alt: "Community members sharing an activity",
+  },
+  {
+    src: "/media/WhatsApp Image 2026-09-09 at 17.09.10 (2).jpeg",
+    alt: "A close view of hands-on work",
+  },
+  {
+    src: "/media/WhatsApp Image 2026-09-09 at 17.09.10 (3).jpeg",
+    alt: "People working on a local solution",
+  },
+  {
+    src: "/media/WhatsApp Image 2026-09-09 at 17.09.11.jpeg",
+    alt: "A community project nearing completion",
+  },
+  {
+    src: "/media/WhatsApp Image 2026-09-09 at 17.09.11 (1).jpeg",
+    alt: "A final view of the shared activity",
+  },
 ];
 
 const projectVideos = [
@@ -64,15 +145,41 @@ const projectVideos = [
     src: "/media/WhatsApp Video 2026-09-05 at 22.42.04.mp4",
     title: "Growing practical solutions",
   },
+  {
+    src: "/media/WhatsApp Video 2026-09-09 at 17.09.06.mp4",
+    title: "A new day of community action",
+  },
 ];
 
 export function FeaturedProjects() {
   const [activeTab, setActiveTab] = useState<"images" | "videos">("images");
   const tabId = useId();
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const context = gsap.context(() => {
+      gsap.from(".featured-projects-copy", {
+        opacity: 0,
+        y: 18,
+        duration: 0.7,
+        ease: "power2.out",
+      });
+      gsap.from(".featured-project-card", {
+        opacity: 0,
+        y: 24,
+        duration: 0.7,
+        delay: 0.12,
+        stagger: 0.06,
+        ease: "power2.out",
+      });
+    }, sectionRef);
+
+    return () => context.revert();
+  }, []);
 
   return (
-    <section className="mt-12" aria-labelledby={`${tabId}-heading`}>
-      <div className="flex flex-col gap-5 border-b border-border pb-5 sm:flex-row sm:items-end sm:justify-between">
+    <section ref={sectionRef} className="mt-12" aria-labelledby={`${tabId}-heading`}>
+      <div className="featured-projects-copy flex flex-col gap-5 border-b border-border pb-5 sm:flex-row sm:items-end sm:justify-between">
         <div>
           <p className="text-sm font-medium uppercase tracking-[0.2em] text-primary">
             See it in practice
@@ -119,7 +226,7 @@ export function FeaturedProjects() {
       {activeTab === "images" ? (
         <div id={`${tabId}-images`} role="tabpanel" className="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {projectImages.map((image) => (
-            <div key={image.src} className="group overflow-hidden rounded-[1.5rem] bg-muted">
+            <div key={image.src} className="featured-project-card group overflow-hidden rounded-[1.5rem] bg-muted">
               <Image
                 src={image.src}
                 alt={image.alt}
@@ -133,7 +240,7 @@ export function FeaturedProjects() {
       ) : (
         <div id={`${tabId}-videos`} role="tabpanel" className="mt-5 grid gap-5 md:grid-cols-3">
           {projectVideos.map((video) => (
-            <div key={video.src} className="overflow-hidden rounded-3xl bg-black">
+            <div key={video.src} className="featured-project-card overflow-hidden rounded-3xl bg-black">
               <video
                 src={video.src}
                 controls

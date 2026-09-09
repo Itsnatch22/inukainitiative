@@ -81,8 +81,12 @@ export default function AboutPage() {
             { src: "/media/WhatsApp Image 2026-09-07 at 12.19.38 (1).jpeg", alt: "People working together outdoors" },
             { src: "/media/WhatsApp Image 2026-09-07 at 12.19.39.jpeg", alt: "A community activity in progress" },
             { src: "/media/WhatsApp Image 2026-09-07 at 12.38.53.jpeg", alt: "A practical community-led solution" },
+            { src: "/media/WhatsApp Image 2026-09-09 at 17.09.06.jpeg", alt: "Community members gathered during a project activity" },
+            { src: "/media/WhatsApp Image 2026-09-09 at 17.09.07 (1).jpeg", alt: "People working together outdoors" },
+            { src: "/media/WhatsApp Image 2026-09-09 at 17.09.08.jpeg", alt: "A community-led learning moment" },
+            { src: "/media/WhatsApp Image 2026-09-09 at 17.09.09.jpeg", alt: "People contributing to a shared project" },
           ]}
-          video={{ src: "/media/WhatsApp Video 2026-09-05 at 22.42.04.mp4", label: "Community work in progress" }}
+          video={{ src: "/media/WhatsApp Video 2026-09-09 at 17.09.06.mp4", label: "Community work in progress" }}
         />
       </section>
 

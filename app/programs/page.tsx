@@ -31,8 +31,12 @@ export default function ProgramsPage() {
           { src: "/media/WhatsApp Image 2026-09-07 at 10.34.18 (1).jpeg", alt: "A sustainable growing project" },
           { src: "/media/WhatsApp Image 2026-09-05 at 22.42.48 (1).jpeg", alt: "A community garden detail" },
           { src: "/media/WhatsApp Image 2026-09-05 at 22.42.46 (1).jpeg", alt: "A practical growing system made from reused materials" },
+          { src: "/media/WhatsApp Image 2026-09-09 at 17.09.10.jpeg", alt: "A practical demonstration" },
+          { src: "/media/WhatsApp Image 2026-09-09 at 17.09.10 (1).jpeg", alt: "Community members sharing an activity" },
+          { src: "/media/WhatsApp Image 2026-09-09 at 17.09.11.jpeg", alt: "A community project nearing completion" },
+          { src: "/media/WhatsApp Image 2026-09-09 at 17.09.11 (1).jpeg", alt: "A final view of the shared activity" },
         ]}
-        video={{ src: "/media/WhatsApp Video 2026-09-05 at 22.42.04.mp4", label: "INUKA 34 program activity" }}
+        video={{ src: "/media/WhatsApp Video 2026-09-09 at 17.09.06.mp4", label: "INUKA 34 program activity" }}
       />
 
       <section className="mt-14 grid gap-8 md:grid-cols-2 xl:grid-cols-4">

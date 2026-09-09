@@ -58,8 +58,12 @@ export default function GetInvolvedPage() {
             { src: "/media/WhatsApp Image 2026-09-07 at 10.34.17.jpeg", alt: "A hands-on sustainable project" },
             { src: "/media/WhatsApp Image 2026-09-05 at 22.42.45.jpeg", alt: "Plants growing in a recycled container" },
             { src: "/media/WhatsApp Image 2026-09-05 at 22.42.47.jpeg", alt: "Community garden materials ready for use" },
+            { src: "/media/WhatsApp Image 2026-09-09 at 17.09.07 (2).jpeg", alt: "A practical solution being demonstrated" },
+            { src: "/media/WhatsApp Image 2026-09-09 at 17.09.07 (3).jpeg", alt: "Community participation in action" },
+            { src: "/media/WhatsApp Image 2026-09-09 at 17.09.08 (1).jpeg", alt: "Shared work during a field activity" },
+            { src: "/media/WhatsApp Image 2026-09-09 at 17.09.08 (2).jpeg", alt: "A practical project taking shape" },
           ]}
-          video={{ src: "/media/WhatsApp Video 2026-09-05 at 22.42.04 (1).mp4", label: "Community participation in action" }}
+          video={{ src: "/media/WhatsApp Video 2026-09-09 at 17.09.06.mp4", label: "Community participation in action" }}
         />
         <div>
           <p className="text-sm font-medium uppercase tracking-[0.2em] text-primary">See the invitation</p>

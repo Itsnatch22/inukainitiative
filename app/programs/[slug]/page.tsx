@@ -72,8 +72,12 @@ export default async function ProgramDetailPage({ params }: ProgramPageProps) {
           { src: "/media/WhatsApp Image 2026-09-07 at 12.38.53.jpeg", alt: "A community-led solution in practice" },
           { src: "/media/WhatsApp Image 2026-09-05 at 22.42.45 (2).jpeg", alt: "A close view of the garden project" },
           { src: "/media/WhatsApp Image 2026-09-05 at 22.42.48 (1).jpeg", alt: "A community garden detail" },
+          { src: "/media/WhatsApp Image 2026-09-09 at 17.09.06 (1).jpeg", alt: "A close view of people participating in the project" },
+          { src: "/media/WhatsApp Image 2026-09-09 at 17.09.07 (3).jpeg", alt: "Community participation in action" },
+          { src: "/media/WhatsApp Image 2026-09-09 at 17.09.10 (3).jpeg", alt: "People working on a local solution" },
+          { src: "/media/WhatsApp Image 2026-09-09 at 17.09.11 (1).jpeg", alt: "A final view of the shared activity" },
         ]}
-        video={{ src: "/media/WhatsApp Video 2026-09-05 at 22.42.04 (3).mp4", label: `${program.shortTitle} activity in progress` }}
+        video={{ src: "/media/WhatsApp Video 2026-09-09 at 17.09.06.mp4", label: `${program.shortTitle} activity in progress` }}
       />
 
       <section className="mt-12 grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">

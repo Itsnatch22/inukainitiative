@@ -30,6 +30,10 @@ export default function ContactPage() {
           { src: "/media/WhatsApp Image 2026-09-05 at 22.43.10.jpeg", alt: "A sustainable growing activity" },
           { src: "/media/WhatsApp Image 2026-09-05 at 22.42.45 (2).jpeg", alt: "A close view of the garden project" },
           { src: "/media/WhatsApp Image 2026-09-05 at 22.42.47.jpeg", alt: "Community garden materials ready for use" },
+          { src: "/media/WhatsApp Image 2026-09-09 at 17.09.09 (1).jpeg", alt: "A project detail from the field" },
+          { src: "/media/WhatsApp Image 2026-09-09 at 17.09.09 (2).jpeg", alt: "A community activity in progress" },
+          { src: "/media/WhatsApp Image 2026-09-09 at 17.09.09 (3).jpeg", alt: "Collaborative work outdoors" },
+          { src: "/media/WhatsApp Image 2026-09-09 at 17.09.10 (2).jpeg", alt: "A close view of hands-on work" },
         ]}
       />
 
