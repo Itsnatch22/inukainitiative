@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 
 import { ContactForm } from "@/components/contact-form";
-import { MediaMosaic } from "@/components/media-mosaic";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -20,22 +19,6 @@ export default function ContactPage() {
           Reach out about partnerships, training, community projects, climate action, sustainable livelihoods, or ways to support our work in Kajiado County.
         </p>
       </div>
-
-      <MediaMosaic
-        className="mb-12"
-        images={[
-          { src: "/media/WhatsApp Image 2026-09-07 at 10.34.17 (1).jpeg", alt: "Community members working together" },
-          { src: "/media/WhatsApp Image 2026-09-07 at 10.34.18.jpeg", alt: "A community project outdoors" },
-          { src: "/media/WhatsApp Image 2026-09-05 at 22.42.49.jpeg", alt: "Plants growing in a practical garden system" },
-          { src: "/media/WhatsApp Image 2026-09-05 at 22.43.10.jpeg", alt: "A sustainable growing activity" },
-          { src: "/media/WhatsApp Image 2026-09-05 at 22.42.45 (2).jpeg", alt: "A close view of the garden project" },
-          { src: "/media/WhatsApp Image 2026-09-05 at 22.42.47.jpeg", alt: "Community garden materials ready for use" },
-          { src: "/media/WhatsApp Image 2026-09-09 at 17.09.09 (1).jpeg", alt: "A project detail from the field" },
-          { src: "/media/WhatsApp Image 2026-09-09 at 17.09.09 (2).jpeg", alt: "A community activity in progress" },
-          { src: "/media/WhatsApp Image 2026-09-09 at 17.09.09 (3).jpeg", alt: "Collaborative work outdoors" },
-          { src: "/media/WhatsApp Image 2026-09-09 at 17.09.10 (2).jpeg", alt: "A close view of hands-on work" },
-        ]}
-      />
 
       <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-14">
         <aside className="rounded-[1.75rem] border border-border bg-card p-8 shadow-sm sm:p-10">

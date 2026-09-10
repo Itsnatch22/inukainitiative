@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { ChevronDown, Menu } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa6";
 
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -22,6 +23,9 @@ const programLinks = [
   { href: "/programs/economic-empowerment", label: "Economic empowerment" },
   { href: "/programs/community-development", label: "Community development" },
 ];
+
+const whatsappHref =
+  "https://wa.me/254711891639?text=Hello%20INUKA%2034%20Initiative%2C%20I%20would%20like%20to%20learn%20more%20about%20your%20work.";
 
 export function SiteHeader() {
   const pathname = usePathname();
@@ -92,7 +96,16 @@ export function SiteHeader() {
           </div>
         </nav>
 
-        <div className="hidden md:block">
+        <div className="hidden items-center gap-2 md:flex">
+          <a
+            href={whatsappHref}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center justify-center gap-2 rounded-full border border-[#25D366]/40 px-4 py-2 text-sm font-medium text-[#128C7E] transition-colors hover:bg-[#25D366]/10"
+          >
+            <FaWhatsapp className="h-4 w-4" aria-hidden="true" />
+            Chat with us
+          </a>
           <Link
             href="/get-involved"
             className="inline-flex items-center justify-center rounded-full bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
@@ -157,6 +170,15 @@ export function SiteHeader() {
                 >
                   Get involved
                 </Link>
+                <a
+                  href={whatsappHref}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center justify-center gap-2 rounded-full border border-[#25D366]/40 px-4 py-3 text-base font-medium text-[#128C7E] transition-colors hover:bg-[#25D366]/10"
+                >
+                  <FaWhatsapp className="h-5 w-5" aria-hidden="true" />
+                  Chat with us
+                </a>
               </nav>
             </SheetContent>
           </Sheet>
